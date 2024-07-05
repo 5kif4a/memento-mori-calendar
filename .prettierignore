@@ -1,0 +1,10 @@
+*.json
+*.md
+*.lock
+.gitignore
+node_modules
+public
+*.d.ts
+build
+dist
+.env.example

@@ -1,0 +1,62 @@
+.calendar {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 32px;
+}
+
+.year {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.calendar > .year:nth-child(5n) {
+    margin-bottom: 4px;
+}
+
+.year-label {
+    position: absolute;
+    right: -8px;
+    width: 1px;
+    color: #2a2a2a;
+    font-weight: 600;
+    font-size: 8px;
+    text-align: left;
+}
+
+.week {
+    margin: 1px;
+    border: 1px solid #2a2a2a;
+    width: 2px;
+    height: 2px;
+}
+
+.week.lived {
+    background-color: #2a2a2a;
+}
+
+@media (min-width: 426px) {
+    .calendar > .year:nth-child(5n) {
+        margin-bottom: 8px;
+    }
+
+    .year-label {
+        font-size: 10px;
+    }
+
+    .week {
+        width: 3px;
+        height: 3px;
+    }
+}
+
+@media (min-width: 1281px) {
+    .year-label {
+        font-size: 12px;
+    }
+
+    .week {
+        width: 6px;
+        height: 6px;
+    }
+}

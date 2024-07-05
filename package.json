@@ -1,0 +1,39 @@
+{
+    "name": "memento-mori-calendar",
+    "private": true,
+    "homepage": "https://5kif4a.github.io/memento-mori-calendar",
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc -b && vite build",
+        "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "preview": "vite preview",
+        "format": "prettier --write . -l",
+        "format:check": "prettier --check .",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
+    },
+    "dependencies": {
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
+    },
+    "devDependencies": {
+        "@types/react": "^18.3.3",
+        "@types/react-dom": "^18.3.0",
+        "@typescript-eslint/eslint-plugin": "^7.13.1",
+        "@typescript-eslint/parser": "^7.13.1",
+        "@vitejs/plugin-react": "^4.3.1",
+        "eslint": "^8.57.0",
+        "eslint-plugin-react-hooks": "^4.6.2",
+        "eslint-plugin-react-refresh": "^0.4.7",
+        "gh-pages": "^6.1.1",
+        "prettier": "^3.3.2",
+        "prettier-plugin-css-order": "^2.1.2",
+        "prettier-plugin-organize-imports": "^4.0.0",
+        "reset-css": "^5.0.2",
+        "typescript": "^5.2.2",
+        "vite": "^5.3.1",
+        "vite-tsconfig-paths": "^4.3.2"
+    }
+}
