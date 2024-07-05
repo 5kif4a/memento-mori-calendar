@@ -1,7 +1,6 @@
 {
     "name": "memento-mori-calendar",
     "private": true,
-    "homepage": "https://5kif4a.github.io/memento-mori-calendar",
     "version": "0.0.0",
     "type": "module",
     "scripts": {
@@ -12,7 +11,7 @@
         "format": "prettier --write . -l",
         "format:check": "prettier --check .",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
+        "deploy": "gh-pages -d dist"
     },
     "dependencies": {
         "react": "^18.3.1",
