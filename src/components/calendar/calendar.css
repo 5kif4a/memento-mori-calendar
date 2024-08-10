@@ -1,7 +1,7 @@
 .calendar {
     display: flex;
     flex-direction: column;
-    padding-bottom: 32px;
+    align-items: center;
 }
 
 .year {
@@ -16,47 +16,21 @@
 
 .year-label {
     position: absolute;
-    right: -8px;
+    right: -4px;
     width: 1px;
     color: #2a2a2a;
     font-weight: 600;
-    font-size: 8px;
+    font-size: 10px;
     text-align: left;
 }
 
 .week {
-    margin: 1px;
+    margin: 0.5px;
     border: 1px solid #2a2a2a;
-    width: 2px;
-    height: 2px;
+    width: 0.8vw;
+    height: 0.8vw;
 }
 
 .week.lived {
     background-color: #2a2a2a;
-}
-
-@media (min-width: 426px) {
-    .calendar > .year:nth-child(5n) {
-        margin-bottom: 8px;
-    }
-
-    .year-label {
-        font-size: 10px;
-    }
-
-    .week {
-        width: 3px;
-        height: 3px;
-    }
-}
-
-@media (min-width: 1281px) {
-    .year-label {
-        font-size: 12px;
-    }
-
-    .week {
-        width: 6px;
-        height: 6px;
-    }
 }

@@ -4,11 +4,12 @@ import "./calendar.css";
 interface ICalendarProps {
     birthdate: string;
     age: number;
+    color?: string;
 }
 
 const weeksInYear = 52;
 
-const Calendar: React.FC<ICalendarProps> = ({ birthdate, age }) => {
+const Calendar: React.FC<ICalendarProps> = ({ birthdate, age, color }) => {
     const birthDate = new Date(birthdate);
     const currentDate = new Date();
     const livedWeeks = Math.floor(
@@ -30,12 +31,26 @@ const Calendar: React.FC<ICalendarProps> = ({ birthdate, age }) => {
                                             ? "week lived"
                                             : "week"
                                     }
+                                    style={{
+                                        backgroundColor:
+                                            index < livedWeeks
+                                                ? color
+                                                : "transparent",
+                                        borderColor: color,
+                                    }}
                                 />
                             </Fragment>
                         );
                     })}
                     {(yearIndex + 1) % 5 === 0 && (
-                        <p className="year-label">{yearIndex + 1}</p>
+                        <p
+                            className="year-label"
+                            style={{
+                                color: color,
+                            }}
+                        >
+                            {yearIndex + 1}
+                        </p>
                     )}
                 </div>
             ))}
